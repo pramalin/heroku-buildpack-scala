@@ -207,9 +207,9 @@ fi
 
 mkdir -p $CACHE_DIR
 for DIR in $CACHED_DIRS ; do
-  if [ -d $DIR ] ; then
     rm -rf $CACHE_DIR/$DIR
     mkdir -p $CACHE_DIR/$DIR
+  if [ -d $DIR ] ; then
     cp -r $DIR/.  $CACHE_DIR/$DIR
   fi
   echo "-----> Dropping ivy cache from the slug: $DIR"
